@@ -1,0 +1,335 @@
+html {
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#cursor {
+  position: absolute;
+  z-index: 99999999;
+  display: none;
+}
+
+.full-screen {
+  width: 100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+}
+
+.question-container {
+  width: 70%;
+  height: 700px;
+  box-shadow: 0 15px 0 0 rgb(0, 0, 0) inset;
+  background-color: rgba(255,255,255,0.4);
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  z-index: 9999999;
+  display: none;
+  -webkit-animation: uwu-slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: uwu-slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.header {
+  width:100%;
+  height: 20%;
+  background-color: rgba(255,255,255,0.4);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header .logo {
+  width: 80%;
+  max-height: 50%;
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.header h1 {
+  font-size: 2em;
+  text-align: center;
+  margin:auto;
+}
+
+.body {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 90%;
+  height: 70%;
+  margin: auto;
+  border:none;
+}
+
+.content .logo {
+  width: auto;
+  max-height: auto;
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.content h2, p {
+  margin: 5px;
+}
+
+.buttonspot {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: auto;
+  height: 15%;
+  margin: auto;
+  border:none;
+}
+
+.buttonspot h2, p {
+  margin: 5px;
+}
+
+.button {
+  width: 10%;
+  height: 38px;
+  align-self: center;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 1.5em;
+  text-decoration: none;
+  -webkit-animation: uwu-lateral 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  animation: uwu-lateral 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top:5px;
+}
+
+.form div {
+  margin :auto;
+  margin-top:5px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.submit{
+  align-items: center;
+  height: 30px;
+  text-align: center;
+  width: 30%;
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.2em;
+  margin-top: 10px;
+	-webkit-animation: uwu-miscare 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: uwu-miscare 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+.barre-progression {
+  width: 50%;
+  align-self: center;
+  height: 10%;
+  margin: auto;
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+.barre-progression h2{
+  width: 100%;
+  height: 60%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0;
+  color: #000000;
+}
+
+.progression {
+  width: 80%;
+  border: 0 none;
+  background: #ddd;
+  border-radius: 14px;
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+}
+.progression::-moz-progress-bar {
+  background: #FFF;
+  border-radius: 14px;
+  box-shadow: inset 0 -2px 4px rgba(0,0,0,0.4), 0 2px 5px 0px rgba(0,0,0,0.3);
+}
+.progression::-webkit-progress-bar {
+  background: transparent;
+}
+.progression::-webkit-progress-value {  
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  border-radius: 14px;
+  box-shadow: inset 0 -2px 4px rgba(0,0,0,0.4), 0 2px 5px 0px rgba(0,0,0,0.3); 
+} 
+
+.bold-text{
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+@-webkit-keyframes uwu-slide {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes uwu-slide {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@-webkit-keyframes uwu-lateral {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+  }
+}
+@keyframes uwu-lateral {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+  }
+}
+
+@-webkit-keyframes uwu-miscare {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+  }
+}
+@keyframes uwu-miscare {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+  }
+}
+
