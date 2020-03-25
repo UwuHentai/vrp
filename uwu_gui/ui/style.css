@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Font2';
+    src: url('font2.ttf'); /*Locatie font*/
+}
+
+* {
+  font-family: 'Font2';
+  margin: 0;
+  padding: 0;
+}
+
+.no-grow {
+  flex-grow: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+.container {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    width: 300px;
+    height: 200px;
+    padding: 2px 20px 15px 60px;
+    background-color: rgb(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.logo {
+  position: absolute;
+  top: 45px;
+  right: 250px;
+  font-weight: normal;
+  overflow: hidden;
+  border-radius: 20%;
+  background-image: url('uwuhentai.gif');
+  background-size: 122.5% 115%;
+  width: 150px;
+  height: 150px;
+  z-index: 7;
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-color: rgb(0, 0, 0);
+}
+
+.banimana{
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  font-size: 40px;
+  font: bold 50px;
+  font-family: 'Font2';
+  border-right: solid;
+  background: linear-gradient(to left, rgba(51, 51, 51, 0.342), rgba(0,0,0,0));
+  color: rgb(0, 0, 0);
+}
+
+.banibanca{
+  position: absolute;
+  top: 110px;
+  right: 50px;
+  font-size: 40px;
+  font: bold 50px;
+  font-family: 'Font2';
+  border-right: solid;
+  background: linear-gradient(to left, rgba(51, 51, 51, 0.342), rgba(0,0,0,0));
+  color: rgb(0, 0, 0);
+
+}
+
+.locmunca{
+  position: absolute;
+  top: 160px;
+  right: 50px;
+  font-size: 25px;
+  font: bold 50px;
+  font-family: 'Font2';
+  border-right: solid;
+  background: linear-gradient(to left, rgba(51, 51, 51, 0.342), rgba(0,0,0,0));
+  color: rgb(255, 0, 0);
+
+}
+
+.numeserver{
+  position: absolute;
+  top: 200px;
+  right: 60px;
+  font-size: 45px;
+  font: bold 50px;
+  font-family: 'Font2';
+  border-top: solid;
+  background: linear-gradient(rgba(51, 51, 51, 0.342), rgba(0,0,0,0));
+  color: rgb(0, 0, 0);
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
