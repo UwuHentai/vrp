@@ -62,6 +62,7 @@ Citizen.CreateThread(function()
                             TriggerServerEvent('uwu:startANIAMTIEpicammer')
                             Wait(15000)
                             ClearPedTasks(ped)
+                            CreateMoneyPickups(playerCoord.x, playerCoord.y, playerCoord.z, 500, 3, 0)
                             TriggerServerEvent('uwu:BANIIIpicammer')
                         end
                     end
@@ -89,6 +90,7 @@ Citizen.CreateThread(function()
                             TriggerServerEvent('uwu:startANIAMTIEciocan')
                             Wait(8000)
                             ClearPedTasks(ped)
+                            CreateMoneyPickups(playerCoord.x, playerCoord.y, playerCoord.z, 500, 3, 0)
                             TriggerServerEvent('uwu:BANIIIciocan')
                         end
                     end
@@ -112,10 +114,13 @@ Citizen.CreateThread(function()
                     DrawMarker(42, v[1],v[2],v[3] , 0, 0, 0, 0, 0, 0, 0.5001,0.5001,0.5001, 255,255,255, 200, 0, 0, 0, 1, 0, 0, 0)
                     if distance < 3 then 
                         if IsControlJustPressed(0, 38) then
+                            SetPedComponentVariation(ped, 1, 89, 0, 0)
                             TaskStartScenarioInPlace(ped, 'WORLD_HUMAN_WELDING', 0, true)
                             TriggerServerEvent('uwu:startANIAMTIEsudat')
-                            Wait(12000)
+                            Wait(1000)
+                            ClearPedProp(ped)
                             ClearPedTasks(ped)
+                            CreateMoneyPickups(playerCoord.x, playerCoord.y, playerCoord.z, 500, 3, 0)
                             TriggerServerEvent('uwu:BANIIIsudat')
                         end
                     end
