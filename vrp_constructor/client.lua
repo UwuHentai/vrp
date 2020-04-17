@@ -108,6 +108,7 @@ Citizen.CreateThread(function()
         for k,v in pairs (coordSUDAT) do 
             local distance = GetDistanceBetweenCoords(playerCoord.x, playerCoord.y, playerCoord.z,v[1],v[2],v[3] , true)
             if distance < 15 then
+                SetPedPropIndex(ped, 0, 39, 0, 0)
             if (Vdist(playerCoord.x, playerCoord.y, playerCoord.z,v[1],v[2],v[3])) then
                 Draw3DText(playerCoord.x, playerCoord.y, playerCoord.z+1, "~p~Apasa ~w~[E] ~p~ca sa lucrezi!", 0.5)
                 Draw3DText(playerCoord.x, playerCoord.y, playerCoord.z, "~h~~w~[ SUDAT ]", 0.5)
@@ -117,6 +118,7 @@ Citizen.CreateThread(function()
                             TaskStartScenarioInPlace(ped, 'WORLD_HUMAN_WELDING', 0, true)
                             TriggerServerEvent('uwu:startANIAMTIEsudat')
                             Wait(1000)
+                            ClearPedProp(ped, 0)
                             ClearPedTasks(ped)
                             CreateMoneyPickups(playerCoord.x, playerCoord.y, playerCoord.z, 500, 3, 0)
                             TriggerServerEvent('uwu:BANIIIsudat')
