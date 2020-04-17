@@ -1,6 +1,6 @@
---[[ local coordHAINESANTIER = {
+local coordHAINESANTIER = {
     {-125.64698791504,-1046.5217285156,27.273559570313}
-} --]]
+} 
 
 local coordPICAMMER = {
     {-145.41050720215,-1074.4691162109,21.68523979187},
@@ -23,23 +23,22 @@ local coordSUDAT = {
     {-84.989959716797,-974.986328125,21.27684211731}
 }
 
---[[Citizen.CreateThread(function()
+Citizen.CreateThread(function()
     while true do 
         Wait(0)
         local ped = PlayerPedId(-1)
         local playerCoord = GetEntityCoords(ped)
         for k,v in pairs (coordHAINESANTIER) do 
             local distance = GetDistanceBetweenCoords(playerCoord.x, playerCoord.y, playerCoord.z,v[1],v[2],v[3] , true)
-            if distance < 5 then 
-                SetPedComponentVariation(ped, 4, 84, 0, 0)
-                SetPedComponentVariation(ped, 6, 47, 0, 0)
-                if distance > 5 then 
-                    ClearAllPedProps(ped)
+            if distance < 52 then 
+                SetPedPropIndex(ped, 0, 39, 0, 0)
+            else if distance > 52 then 
+                ClearPedProp(ped, 0)
                 end
             end
         end
     end
-end)--]]
+end)
 
 Citizen.CreateThread(function()
     while true do 
@@ -51,6 +50,7 @@ Citizen.CreateThread(function()
             Draw3DText(-131.66940307617,-1044.5942382813,27.301239013672, "~h~~c~[ CIOCAN ]", 1.5)            
             Draw3DText(-113.45107269287,-1064.4448242188,26.796787261963, "~h~~o~[ PICAMMER ]", 1.5)
             Draw3DText(-104.33605194092,-1018.0464477539,27.264726638794, "~h~~w~[ SUDAT ]", 1.5)
+            Draw3DText(-125.64698791504,-1046.5217285156,27.273559570313, "~h~~w~[ SANTIER ]", 1.5)
             if distance < 10 then
             if (Vdist(playerCoord.x, playerCoord.y, playerCoord.z,v[1],v[2],v[3])) then
                 Draw3DText(playerCoord.x, playerCoord.y, playerCoord.z+1, "~p~Apasa ~o~[E] ~p~ca sa lucrezi!", 0.5)
@@ -114,11 +114,9 @@ Citizen.CreateThread(function()
                     DrawMarker(42, v[1],v[2],v[3] , 0, 0, 0, 0, 0, 0, 0.5001,0.5001,0.5001, 255,255,255, 200, 0, 0, 0, 1, 0, 0, 0)
                     if distance < 3 then 
                         if IsControlJustPressed(0, 38) then
-                            SetPedComponentVariation(ped, 1, 89, 0, 0)
                             TaskStartScenarioInPlace(ped, 'WORLD_HUMAN_WELDING', 0, true)
                             TriggerServerEvent('uwu:startANIAMTIEsudat')
                             Wait(1000)
-                            ClearPedProp(ped)
                             ClearPedTasks(ped)
                             CreateMoneyPickups(playerCoord.x, playerCoord.y, playerCoord.z, 500, 3, 0)
                             TriggerServerEvent('uwu:BANIIIsudat')
