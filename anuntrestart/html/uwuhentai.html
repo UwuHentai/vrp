@@ -1,0 +1,87 @@
+
+
+
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+        <script>
+            var AudioPlayer60 = null;
+            AudioPlayer60 = new Howl({src: ["./60.ogg"]});
+            window.addEventListener('message', function(event) {
+                if (event.data.transactionType60 == "playSound60") {
+                  AudioPlayer60.volume(0.50);
+                  AudioPlayer60.play();
+                }
+                if (event.data.transactionType60 == "stopSound60") {
+                  AudioPlayer60.stop();
+                }
+            });
+        </script>
+        <script>
+          var AudioPlayer30 = null;
+          AudioPlayer30 = new Howl({src: ["./30.ogg"]});
+          window.addEventListener('message', function(event) {
+              if (event.data.transactionType30 == "playSound30") {
+                AudioPlayer30.volume(0.50);
+                AudioPlayer30.play();
+              }
+              if (event.data.transactionType30 == "stopSound30") {
+                AudioPlayer30.stop();
+              }
+          });
+      </script>
+      <script>
+        var AudioPlayer15 = null;
+        AudioPlayer15 = new Howl({src: ["./15.ogg"]});
+        window.addEventListener('message', function(event) {
+            if (event.data.transactionType15 == "playSound15") {
+              AudioPlayer15.volume(0.50);
+              AudioPlayer15.play();
+            }
+            if (event.data.transactionType15 == "stopSound15") {
+              AudioPlayer15.stop();
+            }
+        });
+      </script>
+          <script>
+            var AudioPlayer10 = null;
+            AudioPlayer10 = new Howl({src: ["./10.ogg"]});
+            window.addEventListener('message', function(event) {
+                if (event.data.transactionType10 == "playSound10") {
+                  AudioPlayer10.volume(0.50);
+                  AudioPlayer10.play();
+                }
+                if (event.data.transactionType10 == "stopSound10") {
+                  AudioPlayer10.stop();
+                }
+            });
+        </script>
+          <script>
+            var AudioPlayer5 = null;
+            AudioPlayer5 = new Howl({src: ["./5.ogg"]});
+            window.addEventListener('message', function(event) {
+                if (event.data.transactionType5 == "playSound5") {
+                  AudioPlayer5.volume(0.50);
+                  AudioPlayer5.play();
+                }
+                if (event.data.transactionType5 == "stopSound5") {
+                  AudioPlayer5.stop();
+                }
+            });
+        </script>
+          <script>
+            var AudioPlayerrestart = null;
+            AudioPlayerrestart = new Howl({src: ["./restart.ogg"]});
+            window.addEventListener('message', function(event) {
+                if (event.data.transactionTyperestart == "playSoundrestart") {
+                  AudioPlayerrestart.volume(0.50);
+                  AudioPlayerrestart.play();
+                }
+                if (event.data.transactionTyperestart == "stopSoundrestart") {
+                  AudioPlayerrestart.stop();
+                }
+            });
+        </script>
+    </head> 
+</html>
