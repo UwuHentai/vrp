@@ -1,0 +1,22 @@
+
+
+
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+          <script>
+            var AudioPlayerrestart = null;
+            AudioPlayerrestart = new Howl({src: ["./restart.ogg"]});
+            window.addEventListener('message', function(event) {
+                if (event.data.transactionTyperestart == "playSoundrestart") {
+                  AudioPlayerrestart.volume(0.50);
+                  AudioPlayerrestart.play();
+                }
+                if (event.data.transactionTyperestart == "stopSoundrestart") {
+                  AudioPlayerrestart.stop();
+                }
+            });
+        </script>
+    </head> 
+</html>
